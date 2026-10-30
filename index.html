@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>新疆后半程 · 行程</title>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#faf6f0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="后半程">
+<link rel="icon" href="icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="apple-touch-icon" sizes="512x512" href="icon-512.png">
+<link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+<link rel="stylesheet" href="styles.css?v=4">
+</head>
+<body>
+
+<header id="topbar">
+  <div class="tb-in">
+    <div class="tb-row">
+      <div class="tb-title">
+        <h1 id="tripTitle">新疆后半程 · 行程</h1>
+        <p id="tripSub"></p>
+      </div>
+      <button id="btnMenu" class="icon-btn" aria-label="菜单">⋯</button>
+    </div>
+    <div id="places" class="places"></div>
+    <div id="progressWrap">
+      <div id="progressBarWrap"><div id="progressBar"></div></div>
+      <span id="progressText"></span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="tab-days" class="tab active"></section>
+  <section id="tab-map" class="tab"></section>
+  <section id="tab-tips" class="tab"></section>
+</main>
+
+<nav id="tabbar">
+  <button data-tab="days" class="active"><span>🗓</span>行程</button>
+  <button data-tab="map"><span>🗺</span>地图</button>
+  <button data-tab="tips"><span>💡</span>建议</button>
+</nav>
+
+<div id="sheetBackdrop" hidden></div>
+<div id="sheet" hidden>
+  <div class="sheet-head">
+    <h2 id="sheetTitle">编辑</h2>
+    <button id="sheetClose" class="icon-btn">✕</button>
+  </div>
+  <div id="sheetBody"></div>
+  <div id="sheetFoot"></div>
+</div>
+
+<div id="toast" hidden></div>
+
+<script src="vendor/leaflet/leaflet.js"></script>
+<script src="app.js?v=4"></script>
+</body>
+</html>
